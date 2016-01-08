@@ -10,8 +10,8 @@ cc_binary(
     srcs = ["main.cc"],
     linkopts = ["-lm"],
     deps = [
-        "//tensorflow/cc:cc_ops",
-        "//tensorflow/core:tensorflow",
+        "@tf//tensorflow/cc:cc_ops",
+        "@tf//tensorflow/core:tensorflow",
     ],
 )
 
@@ -26,5 +26,5 @@ filegroup(
             "gen/**",
         ],
     ),
-    visibility = ["//tensorflow:__subpackages__"],
+    visibility = ["@tf//tensorflow:__subpackages__"],
 )
